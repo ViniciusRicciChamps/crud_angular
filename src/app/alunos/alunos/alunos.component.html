@@ -1,75 +1,95 @@
-<table mat-table [dataSource]="aluno" class="mat-elevation-z8 demo-table">
 
-  <!--- Note that these columns can be defined in any order.
+
+
+
+<mat-card>
+
+  <mat-toolbar color="primary"> Alunos cadastrados
+
+  </mat-toolbar>
+
+  <table mat-table [dataSource]="aluno" class="mat-elevation-z8 demo-table">
+
+    <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Nome Column -->
-  <ng-container matColumnDef="nome">
-    <th mat-header-cell *matHeaderCellDef> Nome Aluno </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.nome}} </td>
-  </ng-container>
 
-  <!-- Idade Column -->
-  <ng-container matColumnDef="idade">
-    <th mat-header-cell *matHeaderCellDef> Idade Aluno </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.idade}} </td>
-  </ng-container>
 
-  <!-- nomeMae Column -->
-  <ng-container matColumnDef="nomeMae">
-    <th mat-header-cell *matHeaderCellDef> Nome Mãe </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.nomeMae}} </td>
-  </ng-container>
+    <!-- Id Column -->
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno._id}} </td>
+    </ng-container>
 
-  <!-- nomePai Column -->
-  <ng-container matColumnDef="nomePai">
-    <th mat-header-cell *matHeaderCellDef> Nome Pai </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.nomePai}} </td>
-  </ng-container>
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome Aluno </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.nome}} </td>
+    </ng-container>
 
-  <!-- numeroRG Column -->
-  <ng-container matColumnDef="numeroRG">
-    <th mat-header-cell *matHeaderCellDef> RG </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.numeroRG}} </td>
-  </ng-container>
+    <!-- Idade Column -->
+    <ng-container matColumnDef="idade">
+      <th mat-header-cell *matHeaderCellDef> Idade Aluno </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.idade}} </td>
+    </ng-container>
 
-  <!-- estadoEndereco Column -->
-  <ng-container matColumnDef="estadoEndereco">
-    <th mat-header-cell *matHeaderCellDef> Estado </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.estadoEndereco}} </td>
-  </ng-container>
+    <!-- nomeMae Column -->
+    <ng-container matColumnDef="nomeMae">
+      <th mat-header-cell *matHeaderCellDef> Nome Mãe </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.nomeMae}} </td>
+    </ng-container>
 
-  <!-- cidadeEndereco Column -->
-  <ng-container matColumnDef="cidadeEndereco">
-    <th mat-header-cell *matHeaderCellDef> Cidade </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.cidadeEndereco}} </td>
-  </ng-container>
+    <!-- nomePai Column -->
+    <ng-container matColumnDef="nomePai">
+      <th mat-header-cell *matHeaderCellDef> Nome Pai </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.nomePai}} </td>
+    </ng-container>
 
-  <!-- cepEndereco Column -->
-  <ng-container matColumnDef="cepEndereco">
-    <th mat-header-cell *matHeaderCellDef> CEP </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.cepEndereco}} </td>
-  </ng-container>
+    <!-- numeroRG Column -->
+    <ng-container matColumnDef="numeroRG">
+      <th mat-header-cell *matHeaderCellDef> RG </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.numeroRG}} </td>
+    </ng-container>
 
-  <!-- nomeRuaEndereco Column -->
-  <ng-container matColumnDef="nomeRuaEndereco">
-    <th mat-header-cell *matHeaderCellDef> Endereço </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.nomeRuaEndereco}} </td>
-  </ng-container>
+    <!-- estadoEndereco Column -->
+    <ng-container matColumnDef="estadoEndereco">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.estadoEndereco}} </td>
+    </ng-container>
 
-  <!-- curso Column -->
-  <ng-container matColumnDef="curso">
-    <th mat-header-cell *matHeaderCellDef> Curso </th>
-    <td mat-cell *matCellDef="let aluno"> {{aluno.curso}} </td>
-  </ng-container>
+    <!-- cidadeEndereco Column -->
+    <ng-container matColumnDef="cidadeEndereco">
+      <th mat-header-cell *matHeaderCellDef> Cidade </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.cidadeEndereco}} </td>
+    </ng-container>
 
-  <ng-container matColumnDef="Ações">
-    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </ng-container>
+    <!-- cepEndereco Column -->
+    <ng-container matColumnDef="cepEndereco">
+      <th mat-header-cell *matHeaderCellDef> CEP </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.cepEndereco}} </td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <!-- nomeRuaEndereco Column -->
+    <ng-container matColumnDef="nomeRuaEndereco">
+      <th mat-header-cell *matHeaderCellDef> Endereço </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.nomeRuaEndereco}} </td>
+    </ng-container>
 
+    <!-- curso Column -->
+    <ng-container matColumnDef="curso">
+      <th mat-header-cell *matHeaderCellDef> Curso </th>
+      <td mat-cell *matCellDef="let aluno"> {{aluno.curso}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ações">
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</mat-card>
